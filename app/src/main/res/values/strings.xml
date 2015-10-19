@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">BluetoothConnector</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="button_connect"> Connect Bluetooth Device </string>
+    <string name="tv_btname"> Bluetooth Device Name: </string>
+    <string name="tv_btaddress"> Bluetooth Device Address: </string>
+</resources>
