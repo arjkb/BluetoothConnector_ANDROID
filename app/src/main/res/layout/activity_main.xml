@@ -5,17 +5,12 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView" />
-
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/button_connect"
         android:id="@+id/connect_button"
         android:layout_marginTop="98dp"
-        android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true" />
 
     <TextView
@@ -41,19 +36,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Small Text"
         android:id="@+id/tv_btname"
-        android:layout_marginEnd="21dp"
-        android:layout_alignTop="@+id/tv_btname_text"
-        android:layout_alignEnd="@+id/connect_button" />
+        android:layout_above="@+id/tv_btaddr_text"
+        android:layout_centerHorizontal="true"
+        android:text="&lt;&lt; NAME >>" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Small Text"
         android:id="@+id/tv_btaddr"
-        android:layout_alignTop="@+id/tv_btaddr_text"
-        android:layout_alignStart="@+id/tv_btname" />
+        android:layout_below="@+id/tv_btname"
+        android:layout_alignStart="@+id/tv_btname"
+        android:text="&lt;&lt; ADDRESS >>" />
 
 </RelativeLayout>
