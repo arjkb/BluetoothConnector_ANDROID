@@ -39,6 +39,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //broadcast receivet to receive intent
         btBroadcastReceiver = new BroadcastReceiver() {
             @Override
             public void onReceive(Context context, Intent intent) {
@@ -47,6 +48,7 @@ public class MainActivity extends Activity {
 
                 if( BluetoothDevice.ACTION_ACL_CONNECTED.equals(action) )   {
 
+                    // Extract BluetoothDevice object referring to the remote object
                     device = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
 
                     Log.v(MYLOGTAG, " Received: " + device.getName() + " " + device.getAddress());
@@ -57,6 +59,8 @@ public class MainActivity extends Activity {
         };
 
         ConnectButton = (Button) findViewById(R.id.connect_button);
+
+        // Intent to open bluetooth settings of phone
         openBtSettings = new Intent();
         openBtSettings.setAction(Settings.ACTION_BLUETOOTH_SETTINGS);
 
